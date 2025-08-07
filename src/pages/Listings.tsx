@@ -30,7 +30,7 @@ const mockProperties = [
   {
     id: 1,
     title: "Modern Downtown Apartment",
-    price: 450000,
+    price: 380000000,
     location: "Downtown District",
     image: apartmentImage,
     beds: 2,
@@ -41,7 +41,7 @@ const mockProperties = [
   {
     id: 2,
     title: "Family Suburban Home",
-    price: 650000,
+    price: 550000000,
     location: "Maple Heights",
     image: houseImage,
     beds: 4,
@@ -52,7 +52,7 @@ const mockProperties = [
   {
     id: 3,
     title: "Luxury Waterfront Condo",
-    price: 890000,
+    price: 750000000,
     location: "Harbor View",
     image: condoImage,
     beds: 3,
@@ -64,7 +64,7 @@ const mockProperties = [
   {
     id: 4,
     title: "Cozy Studio Apartment",
-    price: 320000,
+    price: 270000000,
     location: "Arts District",
     image: apartmentImage,
     beds: 1,
@@ -75,7 +75,7 @@ const mockProperties = [
   {
     id: 5,
     title: "Executive Home with Pool",
-    price: 750000,
+    price: 630000000,
     location: "Oak Valley",
     image: houseImage,
     beds: 5,
@@ -86,7 +86,7 @@ const mockProperties = [
   {
     id: 6,
     title: "Penthouse Suite",
-    price: 1200000,
+    price: 1000000000,
     location: "Skyline Heights",
     image: condoImage,
     beds: 3,
@@ -103,16 +103,16 @@ export default function Listings() {
     location: "",
     propertyType: "",
     minPrice: 0,
-    maxPrice: 2000000,
+    maxPrice: 1500000000,
     beds: "",
     baths: "",
-    priceRange: [0, 2000000]
+    priceRange: [0, 1500000000]
   });
 
   const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-NG', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'NGN',
       maximumFractionDigits: 0
     }).format(price);
   };
@@ -209,8 +209,8 @@ export default function Listings() {
                         <Slider
                           value={filters.priceRange}
                           onValueChange={(value) => setFilters({ ...filters, priceRange: value })}
-                          max={2000000}
-                          step={50000}
+                          max={1500000000}
+                          step={10000000}
                           className="w-full"
                         />
                         <div className="flex justify-between text-sm text-muted-foreground mt-1">

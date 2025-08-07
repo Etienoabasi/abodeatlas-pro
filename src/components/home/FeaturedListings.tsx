@@ -11,7 +11,7 @@ const featuredProperties = [
   {
     id: 1,
     title: "Modern Downtown Apartment",
-    price: "$450,000",
+    price: "₦380,000,000",
     location: "Downtown District",
     image: apartmentImage,
     beds: 2,
@@ -23,7 +23,7 @@ const featuredProperties = [
   {
     id: 2,
     title: "Family Suburban Home",
-    price: "$650,000",
+    price: "₦550,000,000",
     location: "Maple Heights",
     image: houseImage,
     beds: 4,
@@ -35,7 +35,7 @@ const featuredProperties = [
   {
     id: 3,
     title: "Luxury Waterfront Condo",
-    price: "$890,000",
+    price: "₦750,000,000",
     location: "Harbor View",
     image: condoImage,
     beds: 3,

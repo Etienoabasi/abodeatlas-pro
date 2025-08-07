@@ -23,7 +23,7 @@ export function CallToAction() {
               </Button>
             </Link>
             <Link to="/list-property">
-              <Button size="lg" variant="outline" className="min-w-[200px] border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button size="lg" variant="outline" className="min-w-[200px]">
                 <Plus className="h-5 w-5 mr-2" />
                 List Your Property
               </Button>

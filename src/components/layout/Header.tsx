@@ -49,6 +49,11 @@ export function Header() {
         </nav>
 
         <div className="ml-auto flex items-center space-x-4">
+          <Link to="/list-property">
+            <Button variant="default" size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
+              List Your Property
+            </Button>
+          </Link>
           <Link to="/login">
             <Button variant="ghost" size="sm">
               Sign In

@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Link, useNavigate } from "react-router-dom";
+import heroImage from "@/assets/hero-property.jpg";
 
 export default function SignUp() {
   const navigate = useNavigate();
@@ -60,62 +61,72 @@ export default function SignUp() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
-      <main className="flex-1">
-        <section className="container px-4 py-12">
-          <div className="mx-auto max-w-md">
-            <h1 className="text-3xl font-bold tracking-tight mb-2">Create your account</h1>
-            <p className="text-muted-foreground mb-8">Join AbodeAtlas to list properties and save your favorites.</p>
+      <main className="flex-1 relative">
+        <section className="relative min-h-[calc(100vh-4rem)]">
+          <div className="absolute inset-0" aria-hidden="true">
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${heroImage})` }}
+            />
+            <div className="absolute inset-0 bg-background/80" />
+          </div>
 
-            <form onSubmit={onSubmit} className="space-y-6" noValidate>
-              <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  inputMode="email"
-                  autoComplete="email"
-                  placeholder="you@example.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </div>
+          <div className="container relative z-10 px-4 py-12">
+            <div className="mx-auto max-w-md bg-card/60 backdrop-blur-sm border rounded-xl p-6 shadow-lg">
+              <h1 className="text-3xl font-bold tracking-tight mb-2">Create your account</h1>
+              <p className="text-muted-foreground mb-8">Join AbodeAtlas to list properties and save your favorites.</p>
 
-              <div className="space-y-2">
-                <Label htmlFor="password">Password</Label>
-                <Input
-                  id="password"
-                  type="password"
-                  autoComplete="new-password"
-                  placeholder="••••••••"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
-              </div>
+              <form onSubmit={onSubmit} className="space-y-6" noValidate>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    inputMode="email"
+                    autoComplete="email"
+                    placeholder="you@example.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="confirm">Confirm password</Label>
-                <Input
-                  id="confirm"
-                  type="password"
-                  autoComplete="new-password"
-                  placeholder="••••••••"
-                  value={confirm}
-                  onChange={(e) => setConfirm(e.target.value)}
-                  required
-                />
-              </div>
+                <div className="space-y-2">
+                  <Label htmlFor="password">Password</Label>
+                  <Input
+                    id="password"
+                    type="password"
+                    autoComplete="new-password"
+                    placeholder="••••••••"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
+                </div>
 
-              <Button type="submit" size="lg" className="w-full" disabled={loading}>
-                {loading ? "Creating account..." : "Sign Up"}
-              </Button>
-            </form>
+                <div className="space-y-2">
+                  <Label htmlFor="confirm">Confirm password</Label>
+                  <Input
+                    id="confirm"
+                    type="password"
+                    autoComplete="new-password"
+                    placeholder="••••••••"
+                    value={confirm}
+                    onChange={(e) => setConfirm(e.target.value)}
+                    required
+                  />
+                </div>
 
-            <p className="text-sm text-muted-foreground mt-6">
-              Already have an account?{" "}
-              <Link to="/login" className="text-primary hover:underline">Sign In</Link>
-            </p>
+                <Button type="submit" size="lg" className="w-full" disabled={loading}>
+                  {loading ? "Creating account..." : "Sign Up"}
+                </Button>
+              </form>
+
+              <p className="text-sm text-muted-foreground mt-6">
+                Already have an account?{" "}
+                <Link to="/login" className="text-primary hover:underline">Sign In</Link>
+              </p>
+            </div>
           </div>
         </section>
       </main>

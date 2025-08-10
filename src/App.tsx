@@ -8,6 +8,8 @@ import Listings from "./pages/Listings";
 import PropertyDetails from "./pages/PropertyDetails";
 import ListProperty from "./pages/ListProperty";
 import NotFound from "./pages/NotFound";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +24,8 @@ const App = () => (
           <Route path="/listings" element={<Listings />} />
           <Route path="/property/:id" element={<PropertyDetails />} />
           <Route path="/list-property" element={<ListProperty />} />
+          <Route path="/login" element={<SignIn />} />
+          <Route path="/register" element={<SignUp />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

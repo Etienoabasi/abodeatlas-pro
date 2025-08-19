@@ -1,73 +1,82 @@
-# Welcome to your Lovable project
+# AbodeAtlas Real Estate App
 
-## Project info
+A modern real estate web application built with React, Vite, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/4aa85552-1a0b-4af9-945c-77b85a4b3dc9
+## Features
 
-## How can I edit this code?
+- Property listings with search and filter
+- Property details page
+- List your own property
+- Responsive design
+- Custom UI components (shadcn/ui, Radix UI)
+- Toast notifications
+- Interactive charts
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Radix UI](https://www.radix-ui.com/)
+- [React Query](https://tanstack.com/query/latest)
+- [Lucide Icons](https://lucide.dev/)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4aa85552-1a0b-4af9-945c-77b85a4b3dc9) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (v18+ recommended)
+- npm (v9+ recommended)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+npm install
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Development
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build
 
-**Use GitHub Codespaces**
+```sh
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Preview
 
-## What technologies are used for this project?
+```sh
+npm run preview
+```
 
-This project is built with:
+## Project Structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+src/
+  components/
+  hooks/
+  lib/
+  pages/
+  assets/
+public/
+```
 
-## How can I deploy this project?
+## Customization
 
-Simply open [Lovable](https://lovable.dev/projects/4aa85552-1a0b-4af9-945c-77b85a4b3dc9) and click on Share -> Publish.
+- Tailwind config: [`tailwind.config.ts`](tailwind.config.ts)
+- Main entry: [`src/main.tsx`](src/main.tsx)
+- Routing: [`src/App.tsx`](src/App.tsx)
 
-## Can I connect a custom domain to my Lovable project?
+## License
 
-Yes, you can!
+MIT
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
+# Abodeatlas-
